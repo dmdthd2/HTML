@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #박스{
+            width: 300px;
+            border: solid 1px black;
+
+        }
+        #버튼{
+            /* width: 300px; *dgdgdgdgdgdgdgd*/
+            border: solid 1px, black;
+            display: flex;
+            justify-content: space-around; 
+         }
+         #화면버튼{
+            height: 50px;
+            border: solid 1px blue;
+            text-align: center;
+            padding: 50px;
+         }
+         </style>
+         <script>
+             function showName(name){
+                const dis= document.querySelector('#화면버튼');
+                dis.textContent= name;
+            }
+            function showalret(){
+               const dis= document.querySelector('#화면버튼');
+               dis.addEventListener('click',showalret);
+               alert(dis.textContent);
+            }
+           
+            
+
+            
+         </script>
+</head>
+<body>
+    <h1>git add</h1>
+    <div id="박스">
+        <div id="버튼">
+            <button onclick="showName(this.textContent)">버튼1</button>
+            <button onclick="showName(this.textContent)">버튼2</button>
+            <button onclick="showName(this.textContent)">버튼3</button>
+        </div>
+        <div onclick="showalret()" id="화면버튼">클릭한 버튼 표시</div>
+    </div>
+
+</body>
+</html>
